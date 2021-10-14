@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-12 form-group">
+                  <label for="name"> NAME :</label>
+                  <input type="string" id="name" class="form-control"
+                  formControlName="name">
+              </div>
+          </div>
+
+              <div class="row">
+                  <div class="col-12 form-group">
+                      <label for="category">CATEGORY :</label>
+                      <input type="text" id="category" class="form-control"
+                      formControlName="category">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                    <label for="supplier">SUPPLIER :</label>
+                    <input type="text" id="supplier" class="form-control"
+                    formControlName="supplier">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                  <label for="quantityPerUnit">QUANTITY PER UNIT :</label>
+                  <input type="string" id="quantityPerUnit" class="form-control"
+                  formControlName="quantityPerUnit">
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-12 form-group">
+                <label for="unitPrice">UNIT PRICE :</label>
+                <input type="string" id="unitPrice" class="form-control"
+                formControlName="unitPrice">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-12 form-group">
+              <label for="reorderLevel">REORDER LEVEL :</label>
+              <input type="number" id="reorderLevel" class="form-control"
+              formControlName="reorderLevel">
+          </div>
+      </div>
+
+              <div class="row">
+                  <div class="col-12 form-group">
+                      <button type="submit" class="btn btn-success">SAVE</button>
+                      <button type="button" class="btn btn-danger"  (click)="onCancel()">CANCEL</button>
+                  </div>
+              </div>
+          </form>
+
+      </div>
+  </div>
+  </div>

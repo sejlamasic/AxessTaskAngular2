@@ -1,0 +1,25 @@
+
+<div class="container">
+  <table class="table table-sm table-dark">
+    <thead>
+    <tr>
+
+      <th >COMPANY NAME</th>
+      <th >CONTACT NAME</th>
+      <th >CONTACT TITLE</th>
+      <th> EDIT</th>
+      <th> DELETE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let supplier of suppliers">
+       <td>{{supplier.companyName}}</td>
+        <td >{{supplier.contactName}}</td>
+        <td>{{supplier.contactTitle}}</td>
+        <td ><button class="btn btn-warning" (click)="onEditSupplier(supplier.supplierId)" >EDIT</button></td>
+        <td ><button class="btn btn-danger" (click)="onDeleteSupplier(supplier.supplierId)" >DELETE</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>

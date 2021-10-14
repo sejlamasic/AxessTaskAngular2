@@ -1,0 +1,15 @@
+h1{
+  padding-top: 30px;
+  text-align: center;
+  /* color:rgb(56,170,188); */
+  color:black;
+}
+.about{
+  padding-top:50px;
+}
+
+img{
+  padding-top: 30px;
+  height: 100%;
+  width:100%;
+}

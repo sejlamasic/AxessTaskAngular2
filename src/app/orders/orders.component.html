@@ -1,0 +1,35 @@
+<div class="container">
+  <table class="table table-sm table-dark">
+    <thead>
+    <tr>
+
+      <th>NAME</th>
+      <th >CUSTOMER ID</th>
+      <th >EMPLOYEE ID</th>
+      <th>ORDER DATE</th>
+      <th>REQUIRED DATE</th>
+      <th>SHIPPED DATE</th>
+      <th>SHIP VIA</th>
+      <th>FREIGHT</th>
+      <th> EDIT</th>
+      <th> DELETE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+
+        <td>{{order.shipName}}</td>
+        <td>{{order.customerId}}</td>
+        <td >{{order.employeeId}}</td>
+        <td>{{order.orderDate}}</td>
+        <td>{{order.requiredDate}}</td>
+        <td>{{order.shippedDate}}</td>
+        <td>{{order.shipVia}}</td>
+        <td>{{order.freight}}</td>
+        <td ><button class="btn btn-warning" (click)="onEditOrder(order.orderId)"  >EDIT</button></td>
+        <td ><button class="btn btn-danger" (click)="onDeleteOrder(order.orderId)" >DELETE</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table table-sm table-dark">
+      <thead>
+      <tr>
+        <th >CATEGORY ID</th>
+        <th >NAME</th>
+        <th >DESCRIPTION</th>
+        <th> EDIT</th>
+        <th> DELETE</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let category of categories">
+
+           <td>{{category.categoryId}}</td>
+           <td>{{category.categoryName}}</td>
+          <td >{{category.description}}</td>
+          <td ><button class="btn btn-warning"  (click)="onEditCategory(category.categoryId)">EDIT</button></td>
+          <td ><button class="btn btn-danger" (click)="onDeleteCategory(category.categoryId)" >DELETE</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+    </div>
+
+

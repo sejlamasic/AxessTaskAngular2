@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <form [formGroup]="suppliersForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-12 form-group">
+                  <label for="id">ID :</label>
+                  <input type="number" id="id" class="form-control"
+                  formControlName="id">
+              </div>
+          </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                  <label for="companyName"> COMPANY NAME :</label>
+                  <input type="string" id="companyName" class="form-control"
+                  formControlName="companyName">
+              </div>
+          </div>
+
+              <div class="row">
+                  <div class="col-12 form-group">
+                      <label for="contactName">CONTACT NAME :</label>
+                      <input type="text" id="contactName" class="form-control"
+                      formControlName="contactName">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                    <label for="contactTitle">CONTACT TITLE :</label>
+                    <input type="text" id="contactTitle" class="form-control"
+                    formControlName="contactTitle">
+                </div>
+            </div>
+
+              <div class="row">
+                  <div class="col-12 form-group">
+                      <button type="submit" class="btn btn-success">SAVE</button>
+                      <button type="button" class="btn btn-danger"  (click)="onCancel()">CANCEL</button>
+                  </div>
+              </div>
+          </form>
+
+      </div>
+  </div>
+  </div>

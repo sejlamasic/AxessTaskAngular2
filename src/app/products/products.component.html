@@ -1,0 +1,31 @@
+<div class="container">
+  <table class="table table-sm table-dark">
+    <thead>
+    <tr>
+      <th>NAME</th>
+      <th >CATEGORY</th>
+      <th >SUPPLIER</th>
+      <th>QUANTITY PER UNIT</th>
+      <th>UNIT PRICE</th>
+      <th>REORDER LEVEL</th>
+      <th> EDIT</th>
+      <th> DELETE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+
+         <td>{{product.productName}}</td>
+        <td>{{product?.category?.categoryName}}</td>
+        <td >{{product?.supplier?.companyName}}</td>
+        <td>{{product.quantityPerUnit}}</td>
+        <td>{{product.unitPrice}}</td>
+        <td>{{product.reorderLevel}}</td>
+
+        <td ><button class="btn btn-warning" (click)="onEditProduct(product.productId)" >EDIT</button></td>
+        <td ><button class="btn btn-danger" (click)="onDeleteProduct(product.productId)" >DELETE</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>

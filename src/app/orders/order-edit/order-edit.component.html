@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <form [formGroup]="ordersForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-12 form-group">
+                  <label for="shipName">SHIP NAME :</label>
+                  <input type="string" id="shipName" class="form-control"
+                  formControlName="shipName">
+              </div>
+          </div>
+
+              <div class="row">
+                  <div class="col-12 form-group">
+                      <label for="customerId">CUSTOMER :</label>
+                      <input type="text" id="customerId" class="form-control"
+                      formControlName="customerId">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                    <label for="employeeId">EMPLOYEE ID :</label>
+                    <input type="text" id="employeeId" class="form-control"
+                    formControlName="employeeId">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                  <label for="orderDate">ORDER DATE :</label>
+                  <input type="date" id="orderDate" class="form-control"
+                  formControlName="orderDate">
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-12 form-group">
+                <label for="requiredDate">REQUIRED DATE :</label>
+                <input type="date" id="requiredDate" class="form-control"
+                formControlName="requiredDate">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-12 form-group">
+              <label for="shippedDate">SHIPPED DATE :</label>
+              <input type="string" id="shippedDate" class="form-control"
+              formControlName="shippedDate">
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-12 form-group">
+            <label for="shippVia">SHIP VIA :</label>
+            <input type="number" id="shipVia" class="form-control"
+            formControlName="shipVia">
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-12 form-group">
+          <label for="freight">FREIGHT :</label>
+          <input type="number" id="freight" class="form-control"
+          formControlName="freight">
+      </div>
+  </div>
+
+              <div class="row">
+                  <div class="col-12 form-group">
+                      <button type="submit" class="btn btn-success">SAVE</button>
+                      <button type="button" class="btn btn-danger"  (click)="onCancel()">CANCEL</button>
+                  </div>
+              </div>
+          </form>
+
+      </div>
+  </div>
+  </div>
